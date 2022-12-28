@@ -1,0 +1,67 @@
+<div class="responsive" (click)="toggleSidebar()" (window:resize)="onResize($event)">
+    <i id="Close" class="uil uil-bars" [ngClass]="{ 'd-none': isOpen }"></i>
+    <i id="Open" class="uil uil-times" [ngClass]="{ 'd-none': !isOpen }"></i>
+</div>
+<div class="wrapper" [ngClass]="{ hidebar: !isOpen }">
+
+    <div id="Sidebar" class="d-flex flex-column">
+        <section id="inicio" class="inicio">
+            <div class="d-flex flex-column">
+                <div class="contenido-banner">
+                    <div class="contenedor-img">
+
+                        <div class="d-flex flex-column align-items-center justify-content-center mt-3">
+                            <img src="assets/img.png" />
+                            <a>
+                                <h1 #sideBar>Eduardo Baez</h1>
+                            </a>
+                            <div class="social">
+
+                                <a href="https://github.com/AmaurysBaezM" target="_blank"
+                                rel="noopener noreferrer">
+                                    <li><i class="uil uil-github"></i></li>
+                                </a>
+                                <a href="https://www.linkedin.com/in/eduardo-amaurys-baez-monsanto-b3968a247/"
+                                target="_blank" rel="noopener noreferrer">
+                                    <li><i class="uil uil-linkedin"></i></li>
+                                </a>
+                               
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+                <nav class="menu">
+                    <ul class="navigation">
+                        <li class="nav-item" (click)="navigateToSection('Inicio')"><a><i
+                                    class="uil uil-estate "></i>Inicio</a></li>
+                        <li class="nav-item" (click)="navigateToSection('AboutMe')"> <a><i class="uil uil-user"></i>Sobre
+                                Mi</a></li>
+                        <li class="nav-item" (click)="navigateToSection('Skills')"><a><i
+                                    class="bi bi-diagram-3-fill"></i>Habilidades</a></li>
+                        <li class="nav-item" (click)="navigateToSection('Portfolio')"><a><i
+                                    class="uil uil-arrow"></i>Proyectos</a></li>
+                        <li class="nav-item" (click)="navigateToSection('Contact')"><a><i
+                                    class="uil uil-envelope"></i>Contacto</a></li>
+    
+                    </ul>
+    
+    
+    
+                </nav>
+            </div>
+
+           
+        </section>
+    </div>
+
+
+
+</div>
